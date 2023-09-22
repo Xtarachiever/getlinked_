@@ -1,13 +1,18 @@
+"use client";
 import './styles.css';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const MainSection = () => {
   return (
     <div className="mb-16">
       <div className='relative main-section'>
-        <div className='idea absolute top-[60px] left-[450px]'>
+        <motion.div className='idea absolute top-[60px] left-[450px]'
+            animate={{scale:1.1,opacity:1}}
+            initial={{scale:0.8,opacity:0.5}}
+            transition={{duration:2}}>
           <img src='/Bulb.svg' alt='idea'/>
-        </div>
+        </motion.div>
         <div className='relative pb-5 ignite-text'>
               <div className='absolute top-[40px] left-[10px] z-[-1]'>
                 <Image src="/star.svg" alt="star" width={30} height={30}/>
@@ -18,9 +23,12 @@ const MainSection = () => {
             <img src='/curved-line.svg' alt='line' className='curved-line'/>
         </div>
            <section className='mt-8'>
-              <div className='absolute top-[80px] left-[70%] z-[-1]'>
+              <motion.div className='absolute top-[80px] left-[70%] z-[-1]'
+                  animate={{scale:1.1}}
+                  initial={{scale:0.5}}
+                  transition={{repeat:Infinity,duration:2}}>
                 <Image src="/gray-star.svg" alt="star" width={20} height={20}/>
-              </div>
+              </motion.div>
               <div className='absolute bottom-[80px] left-[50%] z-[-1]'>
                 <Image src="/gray-star.svg" alt="star" width={20} height={20}/>
               </div>
@@ -30,7 +38,10 @@ const MainSection = () => {
                       <div className='main-header text-4xl sm:text-5xl md:text-7xl font-extrabold sm:leading-snug tracking-wide relative lg:w-[680px]'>
                         getlinkedTech <br />Hackathon <span className='text-pink'>1.0</span>
                         <img src='/link.svg' alt='connect' className='inline'/>
-                        <img src='/flash.svg' alt='flash' className='inline'/>
+                        <motion.img src='/flash.svg' alt='flash' className='inline'
+                            animate={{scale:1.1}}
+                            initial={{scale:0.5}}
+                            transition={{repeat:Infinity,duration:2}}/>
                       </div>
                       <p className='text-2xl lg:max-w-[550px] py-6'>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</p>
                       <button type='button'>Register</button>

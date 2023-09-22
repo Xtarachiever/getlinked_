@@ -1,14 +1,23 @@
-import Image from "next/image"
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Privacy = () => {
   return (
     <div className='policy-wrapper relative'>
-        <div className='absolute top-[20%] right-[30%] z-[-1]'>
+        <motion.div className='absolute top-[20%] right-[30%] z-[-1]'
+            animate={{scale:1.1}}
+            initial={{scale:0.3}}
+            transition={{repeat:Infinity,duration:2}}>
             <Image src="/gray-star.svg" alt="star" width={30} height={30}/>
-        </div>
-        <div className='absolute bottom-[40px] right-[50%] z-[-1]'>
+        </motion.div>
+        <motion.div className='absolute bottom-[40px] right-[50%] z-[-1]'
+            animate={{opacity:1}}
+            initial={{opacity:0.4}}
+            transition={{repeat:Infinity,duration:2}}>
             <Image src="/star.svg" alt="star" width={20} height={20}/>
-        </div>
+        </motion.div>
         <div className='policies'>
             <div>
                 <p className='text-4xl font-bold'>Privacy Policy and <br /><span className="text-purpish-pink">Terms</span></p>
@@ -33,9 +42,12 @@ const Privacy = () => {
                     <button type='button'>Read More</button>
                 </div>
             </div>
-            <div className='absolute bottom-[80px] left-[50px] z-[-1]'>
+            <motion.div className='absolute bottom-[80px] left-[50px] z-[-1]'
+                        animate={{opacity:1}}
+                        initial={{opacity:0.6}}
+                        transition={{repeat:Infinity,duration:2}}>
                 <Image src="/purple-star.svg" alt="star" width={20} height={20}/>
-            </div>
+            </motion.div>
             <div className='absolute top-[80px] right-[50px] z-[-1]'>
                 <Image src="/star.svg" alt="star" width={20} height={20}/>
             </div>

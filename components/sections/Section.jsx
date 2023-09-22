@@ -1,3 +1,4 @@
+"use client";
 import PartnerSponsor from './PartnerSponsor';
 import Privacy from './Privacy';
 import PrizesAward from './PrizesAward';
@@ -5,8 +6,46 @@ import ReuseableTab from './ReuseableTab';
 import Timeline from './Timeline';
 import './styles.css';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const Section = () => {
+    const variants = {
+        hidden: {opacity:0},
+        show:{
+            opacity:1,
+            transition:{
+                staggerChildren:0.3
+            }
+        }
+    }
+
+    const texts = {
+        hidden:{
+            opacity:0,
+            x:30,
+        },
+        show:{
+            opacity:1,
+            x:0,
+            transition:{
+                duration:1
+            }
+        }
+    }
+
+    const FAQS = {
+        hidden:{
+            opacity:0,
+            x:30,
+        },
+        show:{
+            opacity:1,
+            x:0,
+            transition:{
+                duration:1
+            }
+        }
+    }
   return (
     <div>
         <div className="segment1">
@@ -79,34 +118,42 @@ const Section = () => {
             <div className="section2 w-[52%]">
                 <p className="text-3xl">Judging Criteria<br /><span className="text-purpish-pink">Key attributes</span></p>
                 <div className="lg:max-w-[380px] xl:max-w-none criteria">
-                    <ul>
-                        <li>
+                    <motion.ul
+                    variants={variants}
+                    initial="hidden"
+                    animate="show">
+                        <motion.li
+                        variants={texts}>
                             <span className="text-pink">Innovation and Creativity:</span> Evaluate the uniqueness and creativity of the
                             solution. Consider whether it addresses a real-world problem in a novel 
                             way or introduces innovative features.
-                        </li>
-                        <li>
+                        </motion.li>
+                        <motion.li
+                        variants={texts}>
                             <span className="text-pink">Functionality:</span> Assess how well the solution works. Does it perform its 
                             intended functions effectively and without major issues? Judges would
                             consider the completeness and robustness of the solution.
-                        </li>
-                        <li>
+                        </motion.li>
+                        <motion.li
+                        variants={texts}>
                             <span className="text-pink">Impact and Relevance:</span> Determine the potential impact of the solution 
                             in the real world. Does it address a significant problem, and is it relevant 
                             to the target audience? Judges would assess the potential social, 
                             economic, or environmental benefits.
-                        </li>
-                        <li>
+                        </motion.li>
+                        <motion.li
+                        variants={texts}>
                             <span className="text-pink">Technical Complexity:</span> Evaluate the technical sophistication of the solution. 
                             Judges would consider the complexity of the code, the use of advanced 
                             technologies or algorithms, and the scalability of the solution.
-                        </li>
-                        <li>
+                        </motion.li>
+                        <motion.li
+                        variants={texts}>
                             <span className="text-pink">Adherence to Hackathon Rules:</span> Judges will Ensure that the team adhered 
                             to the rules and guidelines of the hackathon, including deadlines, use of 
                             specific technologies or APIs, and any other competition-specific requirements.
-                        </li>
-                    </ul>
+                        </motion.li>
+                    </motion.ul>
                     <button type='button'>Read More</button>
                 </div>
             </div>

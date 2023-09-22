@@ -1,6 +1,7 @@
-import React from 'react'
+"use client";
 import ReuseablePrizeCard from './ReuseablePrizeCard';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const PrizesAward = () => {
   return (
@@ -10,23 +11,34 @@ const PrizesAward = () => {
             <p className='pr-20 text-md md:text-lg'>Highlight of the prizes or rewards for winners and <br />for participants.</p>
         </div>
         <div className='prizes-wrapper clear-both'>
-            <div className='awards'>
+            <motion.div className='awards'
+            animate={{y:[10,2]}}
+            transition={{ease:'linear',duration:2,repeat:Infinity,delay:1}}>
                 <img src="/Award.svg" alt="awards"/>
-            </div>
+            </motion.div>
             <div className='flex w-[60%] items-start justify-center prizes'>
                 <ReuseablePrizeCard src={'/silver_medal.svg'} position={'2nd'} prize={'N300,000'} width="w-[80px]"/>
                 <ReuseablePrizeCard src={'/gold_medal.svg'} position={'1st'} prize={'N500,000'} bgColor={'bg-[rgba(144,58,255,0.12)]'} top={'-top-[120px]'} winner={true}/>
                 <ReuseablePrizeCard src={'/bronze_medal.svg'} position={'3rd'} prize={'N150,000'} width="w-[70px]" top={'-top-[40px]'}/>
             </div>
-            <div className='absolute top-[42px] left-[50px] z-[-1]'>
+            <motion.div className='absolute top-[42px] left-[50px] z-[-1]'
+            animate={{opacity:1}}
+            initial={{opacity:0.6}}
+            transition={{repeat:Infinity,duration:2}}>
                 <Image src="/star.svg" alt="star" width={20} height={20}/>
-            </div>
-            <div className='absolute bottom-[42px] left-[50%] z-[-1]'>
+            </motion.div>
+            <motion.div className='absolute bottom-[42px] left-[50%] z-[-1]'
+                animate={{scale:1.1}}
+                initial={{scale:0.3}}
+                transition={{repeat:Infinity,duration:2}}>
                 <Image src="/gray-star.svg" alt="gray-star" width={20} height={20}/>
-            </div>
-            <div className='absolute top-[50%] right-[50px] z-[-1]'>
+            </motion.div>
+            <motion.div className='absolute top-[50%] right-[50px] z-[-1]'
+                animate={{scale:1.1}}
+                initial={{scale:0.8}}
+                transition={{repeat:Infinity,duration:2}}>
                 <Image src="/purple-star.svg" alt="star" width={20} height={20}/>
-            </div>
+            </motion.div>
             <div className='absolute top-[0px] left-[50%] z-[-1]'>
                 <Image src="/gray-star.svg" alt="gray-star" width={25} height={20}/>
             </div>

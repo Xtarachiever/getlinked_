@@ -4,7 +4,7 @@ import Link from 'next/link';
 import './styles.css';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { IoMdClose } from 'react-icons/io';
+import { motion } from 'framer-motion';
 
 const Nav = () => {
   const pathName = usePathname();
@@ -13,7 +13,7 @@ const Nav = () => {
     <div className='nav'>
       <div className="nav-wrapper flex items-center text-white py-6 px-[10px] sm:px-[60px]">
         <Link href={'/'}>
-          <img src="/getlinked.svg" alt="logo"/>
+          <motion.img src="/getlinked.svg" alt="logo" whileHover={{scale:1.1}}/>
         </Link>
         <div className={`flex nav-content ${open && 'mobile'}`}>
             <div className="flex links">
