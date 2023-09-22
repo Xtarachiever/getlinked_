@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const PrizesAward = () => {
   return (
-    <div className='relative'>
+    <div className='relative prize-wrapper'>
         <div className='prize-header'>
             <p className='text-xl md:text-3xl py-4'>Prizes and <br /><span className="text-purpish-pink">Rewards</span></p>
             <p className='pr-20 text-md md:text-lg'>Highlight of the prizes or rewards for winners and <br />for participants.</p>

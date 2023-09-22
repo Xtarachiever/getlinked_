@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         <div className='max-w-[1600px] m-[auto] overflow-hidden'>
           <Nav />
           <AnimatePresence>
-            <motion.div className='px-[60px]'
+            <motion.div className='px-[15px] sm:px-[60px]'
             initial={{opacity:0, y:15}}
             animate={{opacity:1, y:0}}
             exit={{opacity:0, y:15}}

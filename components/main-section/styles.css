@@ -57,6 +57,9 @@
     height: 100%;
     z-index: -1;
     rotate: 180deg;
+    margin-left: -60px;
+    margin-top: -20px;
+    opacity: 0.6;
 }
 @media screen and (max-width:900px) {
     .main-section section{
@@ -71,13 +74,18 @@
     .main-details{
         text-align: center;
     }
+    .virtual-image{
+        top: -100px;
+        width: 100vw;
+        left: -20px;
+    }
+    .line-pattern{
+        bottom: 90px;
+    }
 }
 @media screen and (max-width:550px) {
     .text-section .main-header img{
         width: 50px;
-    }
-    .virtual-image{
-        width: 100%;
     }
     .curved-line{
         left: 50%;

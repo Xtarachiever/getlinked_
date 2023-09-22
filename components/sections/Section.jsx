@@ -75,7 +75,7 @@ const Section = () => {
         <div className='line-pattern pt-10'>
           <img src='Line.svg' alt='line' />
         </div>
-        <div className="segment2 relative">
+        <div className="segment2 relative rules">
             <div className="section2 w-[52%] pl-10 relative">
                 <div className='absolute top-[30px] left-[34%] z-[-1]'>
                     <Image src="/purple-star.svg" alt="star" width={20} height={20}/>

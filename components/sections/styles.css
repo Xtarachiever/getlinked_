@@ -1,3 +1,47 @@
+.rules::before,
+.rules::after,
+.segment3::before,
+.segment3::after,
+.prizes-wrapper::before,
+.prizes-wrapper::after{
+    background-image:url(/background-blend.svg);
+    content: "";
+    position: absolute;
+    width: 50%;
+    display: block;
+    height: 100%;
+    z-index: -1;
+    rotate: 180deg;
+    margin-left: -60px;
+    margin-top: -20px;
+    opacity: 0.6;
+}
+.rules::before{
+    top: 0px;
+    left: 0px;
+}
+.segment3::before{
+    left: -70px;
+}
+.segment3::after{
+    right: -60px;
+    bottom: -290px;
+    transform: rotate(180deg);
+}
+.rules::after{
+    right: -80px;
+    bottom: -200px;
+    transform: rotate(175deg);
+}
+.prizes-wrapper::before{
+    left: 0px;
+    bottom: -1050px;
+}
+.prizes-wrapper::after{
+    right: -120px;
+    bottom: -50px;
+    transform: rotate(180deg);
+}
 .section2 .criteria li{
     padding: 10px 0px;
     line-height: 32px;
