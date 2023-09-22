@@ -1,0 +1,20 @@
+.select-box{
+    padding: 20px 0px;
+}
+
+.select-box select{
+    outline: none;
+    width: 100%;
+    /* color: black; */
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.select-box select option{
+    background: #150E28;
+
+}

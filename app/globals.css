@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.register-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+.contact-wrapper{
+    padding-top: 20px;
+}
+.contact-card-div{
+    display: flex;
+    justify-content: space-around;
+}
+.contact-info{
+    padding-top: 50px;
+}
+.contact-info p{
+    padding: 10px 0px;
+}
+.contact-card,
+.register-card{
+    background-color: rgba(255, 255, 255, 0.03);
+    max-width: 600px;
+    min-width: 240px;
+    padding: 50px 10px;
+    border-radius: 10px;
+    width: 70%;
+}
+.register-card{
+    padding: 25px 50px;
+   min-width: 550px;
+}
+.register-card .inputs{
+    padding: 10px 0px;
+}
+.register-card .inputs .input-fields{
+    padding: 5px 0px;
+}
+.register-card .inputs .input-fields input::placeholder{
+    font-size: 12px;
+}
+.contact-card-wrapper{
+    width: 85%;
+    margin: auto;
+}
+.contact-card button,
+.register-card button{
+    background: linear-gradient(270deg, #903AFF 0%, #FE34B9 100%);
+    outline: none;
+    border: none;
+    padding: 10px 36px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.contact-card .button{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.socials span{
+    display: block;
+}
+.socials a svg{
+    display: inline;
+    margin-right: 10px;
+}
+.mobile-details{
+    display: none;
+}
+.register-card .stylish{
+    display: flex;
+    width: 60%;
+}
+.register-card .dots{
+    flex: 1;
+    border-bottom: 1px dotted #D434FE;
+    height: 18px;
+    margin-left: 4px;
+    width: 60px;
+}
+.input-fields{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.checkbox input{
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.mobile-text{
+    display: none;
+}
+.dots img{
+    animation: movement 6s linear forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes movement{
+    0%{
+        transform: translateX(-10%);
+    }
+    10%{
+        transform: translateX(0%);
+    }
+    30%{
+        transform: translateX(30%);
+    }
+    50%{
+        transform: translateX(10%);
+    }
+    70%{
+        transform: translateX(5%);
+    }
+    100%{
+        transform: translateX(-10%);
+    }
+}
+.input-fields div p{
+    padding-bottom: 10px;
+}
+.input-fields:nth-child(3){
+    align-items: end;
+}
+.input-fields:nth-child(3) .select-box,
+.input-fields:nth-child(3) .input-box{
+    padding: 0px 0px 10px 0px;
+} 
+.input-fields:nth-child(3) .input-box label{
+    top: -30px;
+}
+@media screen and (max-width:1080px) {
+    .register-card{
+        min-width: 400px;
+    }
+    .register-card .inputs .input-fields{
+        display: flex;
+        flex-direction: column;
+    }
+    .input-fields:nth-child(3) div{
+        width: 100%;
+    }
+    .input-fields:nth-child(3) .input-box{
+        padding-top: 30px;
+    }
+    .input-fields:nth-child(3) .input-box label{
+        top: -10px;
+    }
+}
+@media screen and (max-width:820px) {
+    .register-wrapper{
+        grid-template-columns: 1fr;
+    }
+    .register-card{
+        width: 100%;
+        max-width: none;
+        background-color: inherit;
+        padding: 25px 0px;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile-text{
+        display: block;
+    }
+}
+@media screen and (max-width:650px) {
+    .contact-card-div{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .desktop-details{
+        display: none;
+    }
+    .contact-card{
+        width: 100%;
+        order: 1;
+        background-color: inherit;
+    }
+    .contact-info{
+        order: 2;
+        text-align: center;
+    }
+    .mobile-details{
+        display: block;
+        padding: 10px 0px;
+    }
+    .register-card .stylish{
+        width: 80%;
+    }
+    .register-card{
+        min-width: auto;
+    }
+}
+@media screen and (max-width:460px){
+    .register-card .stylish{
+        width: 100%;
+    }
+}

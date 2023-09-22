@@ -1,0 +1,39 @@
+.alert-wrapper{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    /* background-color: rgba(20, 13, 39, 0.4); */
+    max-width: none;
+    height: 100vh;
+}
+.alert-wrapper .alert-content{
+    margin: auto;
+    padding: 60px;
+    border: 2px solid #D434FE;
+    border-radius: 5px;
+}
+img{
+    display: inline;
+}
+.alert-content p{
+    padding: 15px 10px;
+}
+.alert-wrapper .alert-content a button{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.alert-wrapper .alert-content a button{
+    background: linear-gradient(270deg, #903AFF 0%, #FE34B9 100%);
+    outline: none;
+    border: none;
+    padding: 10px 36px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.cover{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(20, 13, 39, 0.9);
+    position: absolute;
+}
