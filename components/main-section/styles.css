@@ -47,7 +47,7 @@
     text-align: right;
 }
 .text-section::before{
-    background-image:url(/circular-background-blend.png);
+    background-image:url(/background-blend.svg);
     content: "";
     position: absolute;
     width: 50%;

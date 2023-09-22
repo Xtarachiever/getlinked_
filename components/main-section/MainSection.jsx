@@ -40,7 +40,7 @@ const MainSection = () => {
                   </div>
                 </div>
               </div>
-                <img src='/virtual_image.svg' alt='virtual' className='section2 virtual-image absolute -bottom-2 -right-[25px] max-w-[750px] z-[-1]'/>
+                <img src='/Virtual_image.svg' alt='virtual' className='section2 virtual-image absolute -bottom-2 -right-[25px] max-w-[750px] z-[-1]'/>
                 {/* <img src='/globe.svg' alt='globe' className='absolute top-[50px] right-[60px] w-[600px]'/> */}
            </section>
            <div className='line-pattern absolute -bottom-2'>
