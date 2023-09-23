@@ -5,9 +5,11 @@ import { FaLinkedinIn, FaFacebookF, FaMapMarkerAlt } from 'react-icons/fa';
 import { BiSolidPhoneCall } from 'react-icons/bi';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 
 const Footer = () => {
+    const pathName = usePathname();
   return (
     <div className='footer bg-footer-bg text-white relative'>
         <div className='absolute bottom-[50%] right-[50px] z-[2]'>
@@ -34,9 +36,9 @@ const Footer = () => {
             <div className='sections section2'>
                 <ul>
                     <li className='text-purpish-pink'>Useful Links</li>
-                    <li>Overview</li>
-                    <li>FAQs</li>
-                    <li><Link href={'/register'}>Register</Link></li>
+                    <li><Link href={'/'} className={`${pathName === '/' ? 'active' : ''}`}>Overview</Link></li>
+                    <li><Link href={'/faqs'} className={`${pathName === '/faqs' ? 'active' : ''}`}>FAQs</Link></li>
+                    <li><Link href={'/register'} className={`${pathName === '/register' ? 'active' : ''}`}>Register</Link></li>
                     <li className='text-purpish-pink social-media'> Follow us
                         <span>
                             <Link href={'/'}><BsInstagram className='insta'/></Link>

@@ -28,7 +28,8 @@
 }
 .nav-content div a:hover,
 .nav-content div a.active,
-.footer .section2 ul li:hover{
+.footer .section2 ul li:hover,
+.footer .section2 ul li a.active{
     background: linear-gradient(270deg, #903AFF 0%, #FE34B9 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;

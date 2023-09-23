@@ -54,7 +54,7 @@ const Timeline = () => {
             </motion.div>
                 <motion.div className="reverse"
                     variants={reverseTimeline}
-                    transition={{delay:6,stiffness:300,type:"spring"}}
+                    transition={{delay:4,stiffness:300,type:"spring"}}
                     >
                     <div className="content">
                         <p className="topic">Teams Registration begins</p>
@@ -65,7 +65,7 @@ const Timeline = () => {
                 </motion.div>
             <motion.div className="normal"
             variants={normalTimeline}
-            transition={{delay:7,stiffness:300,type:"spring"}}
+            transition={{delay:5,stiffness:300,type:"spring"}}
             >
                 <div className="content">
                     <p className="topic">Teams Registration ends</p>
@@ -76,7 +76,7 @@ const Timeline = () => {
             </motion.div>
             <motion.div className="reverse"
                 variants={reverseTimeline}
-                transition={{delay:8,stiffness:300,type:"spring"}}
+                transition={{delay:6,stiffness:300,type:"spring"}}
             >
                 <div className="content">
                     <p className="topic">Announcement of the accepted teams and ideas</p>
@@ -87,7 +87,7 @@ const Timeline = () => {
             </motion.div>
             <motion.div className="normal"
                 variants={normalTimeline}
-                transition={{delay:9,stiffness:300,type:"spring"}}
+                transition={{delay:7,stiffness:300,type:"spring"}}
             >
                 <div className="content">
                     <p className="topic">Getlinked Hackathon 1.0 Offically Begins</p>
@@ -98,7 +98,7 @@ const Timeline = () => {
             </motion.div>
             <motion.div className="reverse"
                 variants={reverseTimeline}
-                transition={{delay:10,stiffness:300,type:"spring"}}
+                transition={{delay:8,stiffness:300,type:"spring"}}
            >
                 <div className="content">
                     <p className="topic">Demo Day</p>
