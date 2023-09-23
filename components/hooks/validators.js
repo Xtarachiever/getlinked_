@@ -10,7 +10,7 @@ export const ContactValidator = object().shape({
         .matches( /^[a-zA-Z]{2,}$/, 'Only Alphabets are allowed'),
     phone_number: string().trim()
         .required('Phone number is required')
-        .matches( /^[0-9]{5,}$/, 'Only Numbers are allowed'),
+        .matches( /^[0-9]{5,}$/, 'Only Numbers are allowed (Minimum of 5)'),
 });
 
 export const RegisterValidator = object().shape({
@@ -20,7 +20,7 @@ export const RegisterValidator = object().shape({
     email: string().trim().email().required(),
     phone_number: string().trim()
         .required('Phone number is required')
-        .matches( /^[0-9]{5,}$/, 'Only Numbers are allowed'),
+        .matches( /^[0-9]{5,}$/, 'Only Numbers are allowed (Minimum of 5)'),
     project_topic: string().required('Fill in your message'),
     category:string().trim().required('Please select a category'),
     group_size: string().trim()
