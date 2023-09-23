@@ -33,19 +33,6 @@ const Section = () => {
         }
     }
 
-    const FAQS = {
-        hidden:{
-            opacity:0,
-            x:30,
-        },
-        show:{
-            opacity:1,
-            x:0,
-            transition:{
-                duration:1
-            }
-        }
-    }
   return (
     <div>
         <div className="segment1">
@@ -58,7 +45,10 @@ const Section = () => {
                     <img src="/arrow.svg" alt="arrow"/>
                 </div>
             </div>
-            <div className="section2 w-[52%] relative">
+            <motion.div className="section2 w-[52%] relative"
+            initial={{x:"-100vw"}}
+            animate={{x:0}}
+            transition={{delay:3}}>
                 <p className="text-3xl">Introduction to getlinked <br /><span className="text-purpish-pink">techHackathon 1.0</span></p>
                 <p className="lg:max-w-[380px] xl:max-w-none">Our tech hackathon is a melting pot of visionaries, and its purpose is as
                     clear as day: to shape the future. Whether you&#39;re a coding genius, a 
@@ -70,7 +60,7 @@ const Section = () => {
                 <div className='absolute top-[50px] right-[20px] z-[-1]'>
                     <Image src="/purple-star.svg" alt="star" width={20} height={20}/>
                 </div>
-            </div>
+            </motion.div>
         </div>
         <div className='line-pattern pt-10'>
           <img src='Line.svg' alt='line' />
@@ -92,9 +82,12 @@ const Section = () => {
                     <Image src="/gray-star.svg" alt="star" width={20} height={20}/>
                 </div>
             </div>
-            <div className="section1">
+            <motion.div className="section1"
+            initial={{x:"100vw"}}
+            animate={{x:0}}
+            transition={{delay:4,stiffness:150}}>
                 <img src={'/lady-icon.svg'} alt="" />
-            </div>
+            </motion.div>
             <div className='absolute bottom-[50%] right-[50px] z-[-1]'>
                 <Image src="/star.svg" alt="star" width={20} height={20}/>
             </div>

@@ -36,7 +36,7 @@ const MainSection = () => {
               <div className='text-section py-6 w-[52%] lg:w-[75%]'>
                 <div className='relative w-full'>
                   <div className='main-details'>
-                      <div className='main-header text-4xl sm:text-5xl md:text-7xl font-extrabold sm:leading-snug tracking-wide relative lg:w-[680px]'>
+                      <div className='main-header text-4xl sm:text-5xl md:text-[68px] font-extrabold sm:leading-snug tracking-wide relative lg:w-[680px]'>
                         getlinkedTech <br />Hackathon <span className='text-pink'>1.0</span>
                         <img src='/link.svg' alt='connect' className='inline'/>
                         <motion.img src='/flash.svg' alt='flash' className='inline'
@@ -44,15 +44,26 @@ const MainSection = () => {
                             initial={{scale:0.5}}
                             transition={{repeat:Infinity,duration:2}}/>
                       </div>
-                      <p className='text-2xl lg:max-w-[550px] py-6'>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</p>
-                      <Link href="/"><button type='button'>Register</button></Link>
+                      <motion.p className='text-2xl lg:max-w-[550px] py-6'
+                      initial={{y:"50vh"}}
+                      animate={{y:-10}}
+                      transition={{delay:1, stiffness:120,type:'spring'}}
+                      >
+                        Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</motion.p>
+                      <Link href="/"><motion.button type='button'
+                      initial={{x:"-100vw"}}
+                      animate={{x:0}}
+                      transition={{delay:2,type:'spring',stiffness:150}}>Register</motion.button></Link>
                       <div className='py-14'>
                         <p className='text-4xl sm:text-6xl'>00<sub className='subscript'>H</sub>00<sub className='subscript'>M</sub>00<sub className='subscript'>s</sub></p>
                       </div>
                   </div>
                 </div>
               </div>
-                <img src='/Virtual_image.svg' alt='virtual' className='section2 virtual-image absolute -bottom-2 -right-[25px] max-w-[750px] z-[-1]'/>
+                <motion.img src='/Virtual_image.svg' alt='virtual' className='section2 virtual-image absolute -bottom-2 -right-[25px] max-w-[750px] z-[-1]'
+                animate={{y:0}}
+                initial={{y:"50vh"}}
+                transition={{delay:1, stiffness:50, type:"spring"}}/>
                 {/* <img src='/globe.svg' alt='globe' className='absolute top-[50px] right-[60px] w-[600px]'/> */}
            </section>
            <div className='line-pattern absolute -bottom-2'>

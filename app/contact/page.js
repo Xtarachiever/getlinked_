@@ -8,6 +8,7 @@ import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import TextArea from "@/components/InputField/TextArea";
 import { useContactHook } from "@/components/hooks/contact-hook";
 import Overlay from "@/components/alerts/Overlay";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const {
@@ -23,25 +24,55 @@ const Contact = () => {
     setSuccess
   } = useContactHook();
 
+  const variants = {
+    hidden: {opacity:0},
+    show:{
+        opacity:1,
+        transition:{
+            staggerChildren:0.3
+        }
+    }
+}
+
+const texts = {
+    hidden:{
+        opacity:0,
+        x:30,
+    },
+    show:{
+        opacity:1,
+        x:0,
+        transition:{
+            duration:2
+        }
+    }
+}
+
   return (
     <div className="contact-wrapper relative h-[100vh]">
       <div className="contact-card-div text-white">
-        <div className="contact-info">
+        <motion.div className="contact-info"
+        variants={variants}
+        animate="show"
+        initial="hidden">
           <div className="desktop-details">
-            <p className="text-2xl text-purpish-pink font-bold">Get In Touch</p>
-            <p>Contact Information</p>
-            <p>
+            <motion.p className="text-2xl text-purpish-pink font-bold" variants={texts}>Get In Touch</motion.p>
+            <motion.p variants={texts}>Contact Information</motion.p>
+            <motion.p variants={texts}>
               27,Alara Street <br />
               Yaba 100012 <br />
               Lagos State
-            </p>
+            </motion.p>
             <p>Call Us : 07067981819</p>
-            <p>
+            <motion.p variants={texts}>
               we are open from Monday-Friday <br />
               08:00am - 05:00pm
-            </p>
+            </motion.p>
           </div>
-          <div className="socials">
+          <motion.div className="socials"
+          animate={{x:0}}
+          initial={{x:"100vw"}}
+          transition={{stiffness:300, delay:0.5, type:"spring"}}>
             <span className="text-purpish-pink">Share on</span>
             <Link href={"/"}>
               <BsInstagram className="insta" />
@@ -55,8 +86,8 @@ const Contact = () => {
             <Link href={"/"}>
               <FaLinkedinIn />
             </Link>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         <div className="contact-card">
           <div className="contact-card-wrapper w-full">
             <div className="text-purpish-pink text-xl font-semibold pb-4">

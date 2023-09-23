@@ -13,7 +13,6 @@ const Timeline = () => {
         show:{
             opacity:1,
             x:0,
-            
         }
     }
     const reverseTimeline = {

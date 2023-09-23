@@ -4,6 +4,29 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const Privacy = () => {
+    const variants = {
+        hidden: {opacity:0},
+        show:{
+            opacity:1,
+            transition:{
+                staggerChildren:0.3
+            }
+        }
+    }
+
+    const texts = {
+        hidden:{
+            opacity:0,
+            x:30,
+        },
+        show:{
+            opacity:1,
+            x:0,
+            transition:{
+                duration:2
+            }
+        }
+    }
   return (
     <div className='policy-wrapper relative'>
         <motion.div className='absolute top-[20%] right-[30%] z-[-1]'
@@ -24,24 +47,38 @@ const Privacy = () => {
                 <p className='py-4 text-gray1'>Last updated on September 12, 2023</p>
                 <p className='py-8'>Below are our privacy & policy, which outline a lot of goodies. <br />it&#39;s our aim to always take of our participant</p>
             </div>
-            <div className='policy'>
-                <p>At getlinked tech Hackathon 1.0, we value your privacy
+            <motion.div className='policy'
+            variants={variants}
+            initial="hidden"
+            animate="show">
+                <motion.p variants={texts}
+                initial="hidden"
+                animate="show">At getlinked tech Hackathon 1.0, we value your privacy
                     and are committed to protecting your personal information.
                     This Privacy Policy outlines how we collect, use, disclose, 
                     and safeguard your data when you participate in our tech 
                     hackathon event. By participating in our event, you consent 
                     to the practices described in this policy.
-                </p>
+                </motion.p>
                 <p className='text-purple pt-8'>Licensing Policy</p>
                 <p>Here are terms of our Standard License:</p>
                 <ol className='license'>
-                    <li><span></span>The Standard License grants you a non-exclusive right to navigate and register for our event</li>
-                    <li><span></span>You are licensed to use the item available at any free source sites, for your project developement</li>
+                    <motion.li
+                    variants={texts}
+                    initial="hidden"
+                    animate="show"><span></span>The Standard License grants you a non-exclusive right to navigate and register for our event</motion.li>
+                    <motion.li
+                    variants={texts}
+                    initial="hidden"
+                    animate="show"><span></span>You are licensed to use the item available at any free source sites, for your project developement</motion.li>
                 </ol>
-                <div className='button'>
+                <motion.div className='button'
+                initial={{x:"-100vw"}}
+                animate={{x:0}}
+                transition={{delay:6,stiffness:300}}>
                     <button type='button'>Read More</button>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
             <motion.div className='absolute bottom-[80px] left-[50px] z-[-1]'
                         animate={{opacity:1}}
                         initial={{opacity:0.6}}

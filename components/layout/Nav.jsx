@@ -23,7 +23,8 @@ const Nav = () => {
                 <Link href={'/contact'} className={`${pathName === '/contact' ? 'active' : ''}`}>Contact</Link>
             </div>
             <Link href={'/register'}>
-              <button type='button'>Register</button>
+              <motion.button type='button'
+              whileHover={{scale:1.1}}>Register</motion.button>
             </Link>
         </div>
         <div className='nav-hamburger' onClick={()=>setOpen(true)}>

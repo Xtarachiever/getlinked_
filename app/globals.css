@@ -7,6 +7,9 @@
 /* body:has(.hidden){
     overflow: hidden !important;
 } */
+.check-div label{
+    cursor: pointer;
+}
 .register-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;

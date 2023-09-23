@@ -4,6 +4,7 @@ import InputField from "@/components/InputField/InputField";
 import SelectField from "@/components/select-field/SelectField";
 import { useRegisterHook } from "@/components/hooks/register-hook";
 import Overlay from "@/components/alerts/Overlay";
+import { motion } from "framer-motion";
 
 const Register = () => {
   const {
@@ -25,9 +26,12 @@ const Register = () => {
       <p className="text-purpish-pink font-bold text-2xl pb-6 mobile-text">
         Register
       </p>
-      <div className="section1">
+      <motion.div className="section1"
+      initial={{y:"-100vh"}}
+      animate={{y:0}}
+      transition={{delay:1}}>
         <img src="/registration.svg" alt="register" />
-      </div>
+      </motion.div>
       <div className="section2 register-card">
         <div>
           <p className="text-purpish-pink font-bold text-2xl pb-6 desktop">
@@ -111,11 +115,11 @@ const Register = () => {
             Please review your registration details before submitting
           </p>
           <div className="checkbox flex items-center py-5">
-            <input type="checkbox"
+            <input type="checkbox" name="check" id="check"
             onChange={(e)=> handleValueChange('privacy_policy_accepted', e.target.checked)}/>
             <p className="text-[#FF26B9]">{errors?.privacy_policy_accepted?.message ?? undefined}</p>
-            <span className="pl-2">
-              I agreed with the event terms and conditions and privacy policy
+            <span className="pl-2 cursor-pointer check-div" >
+              <label htmlFor="check"> I agreed with the event terms and conditions and privacy policy </label>
             </span>
           </div>
           <button className="w-full" type="submit">
