@@ -2,13 +2,14 @@
 
 import Link from 'next/link';
 import './styles.css';
-import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { usePathname,useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Nav = () => {
   const pathName = usePathname();
   const [open, setOpen] = useState(false);
+
   return (
     <motion.div className='nav'
     animate={{y:0}}
@@ -20,7 +21,7 @@ const Nav = () => {
         </Link>
         <div className={`flex nav-content ${open && 'mobile'}`}>
             <div className="flex links">
-                <Link href={'#timeline'} className={`${pathName === '/#timeline' ? 'active' : ''}`} onClick={()=>setOpen(false)}>Timeline</Link>
+                <Link href={'/#timeline'} className={`${pathName === '/#timeline' ? 'active' : ''}`} onClick={()=>setOpen(false)}>Timeline</Link>
                 <Link href={'/'} onClick={()=>setOpen(false)} className={`${pathName === '/' ? 'active' : ''}`}>Overview</Link>
                 <Link href={'#faqs'} className={`${pathName === '/#faqs' ? 'active' : ''}`} onClick={()=>setOpen(false)}>FAQS</Link>
                 <Link href={'/contact'} className={`${pathName === '/contact' ? 'active' : ''}`} onClick={()=>setOpen(false)}>Contact</Link>

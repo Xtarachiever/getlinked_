@@ -11,6 +11,9 @@ body:has(.hide){
 .check-div label{
     cursor: pointer;
 }
+.left-arrow{
+    display: none;
+}
 .register-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -182,6 +185,9 @@ button.active{
     }
 }
 @media screen and (max-width:650px) {
+    .left-arrow{
+        display: block;
+    }
     .contact-card-div{
         flex-direction: column;
         justify-content: center;

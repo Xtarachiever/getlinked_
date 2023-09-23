@@ -51,7 +51,7 @@ const texts = {
   return (
     <div className={`contact-wrapper h-[100vh] ${success && 'hide'}`}>
       <Link href="/">
-        <motion.img src="/leftArrow.svg" alt="back" className="absolute left-[10%] top-[120px]"
+        <motion.img src="/leftArrow.svg" alt="back" className="left-arrow absolute left-[10%] top-[120px]"
         animate={{x:0}}
         initial={{x:"-100vw"}}
         transition={{delay:1}}/>
