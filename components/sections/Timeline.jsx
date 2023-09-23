@@ -43,7 +43,7 @@ const Timeline = () => {
             </motion.div>
             <motion.div className="normal"
             variants={normalTimeline}
-            transition={{delay:2}}
+            transition={{delay:5}}
             >
                 <div className="content">
                     <p className="topic">Hackathon Announcement</p>
@@ -54,7 +54,7 @@ const Timeline = () => {
             </motion.div>
                 <motion.div className="reverse"
                     variants={reverseTimeline}
-                    transition={{delay:3}}
+                    transition={{delay:6}}
                     >
                     <div className="content">
                         <p className="topic">Teams Registration begins</p>
@@ -65,7 +65,7 @@ const Timeline = () => {
                 </motion.div>
             <motion.div className="normal"
             variants={normalTimeline}
-            transition={{delay:4}}
+            transition={{delay:7}}
             >
                 <div className="content">
                     <p className="topic">Teams Registration ends</p>
@@ -76,7 +76,7 @@ const Timeline = () => {
             </motion.div>
             <motion.div className="reverse"
                 variants={reverseTimeline}
-                transition={{delay:5}}
+                transition={{delay:8}}
             >
                 <div className="content">
                     <p className="topic">Announcement of the accepted teams and ideas</p>
@@ -87,7 +87,7 @@ const Timeline = () => {
             </motion.div>
             <motion.div className="normal"
                 variants={normalTimeline}
-                transition={{delay:6}}
+                transition={{delay:9}}
             >
                 <div className="content">
                     <p className="topic">Getlinked Hackathon 1.0 Offically Begins</p>
@@ -98,7 +98,7 @@ const Timeline = () => {
             </motion.div>
             <motion.div className="reverse"
                 variants={reverseTimeline}
-                transition={{delay:7}}
+                transition={{delay:10}}
            >
                 <div className="content">
                     <p className="topic">Demo Day</p>

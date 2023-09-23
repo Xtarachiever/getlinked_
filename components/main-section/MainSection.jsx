@@ -8,7 +8,7 @@ const MainSection = () => {
   return (
     <div className="mb-16">
       <div className='relative main-section'>
-        <motion.div className='idea absolute top-[60px] left-[450px]'
+        <motion.div className='idea absolute top-[40px] sm:top-[60px] left-[300px] sm:left-[450px]'
             animate={{scale:1.1,opacity:1}}
             initial={{scale:0.8,opacity:0.5}}
             transition={{duration:2}}>
@@ -63,7 +63,7 @@ const MainSection = () => {
                 <motion.img src='/Virtual_image.svg' alt='virtual' className='section2 virtual-image absolute -bottom-2 -right-[25px] max-w-[750px] z-[-1]'
                 animate={{y:0}}
                 initial={{y:"50vh"}}
-                transition={{delay:1, stiffness:50, type:"spring"}}/>
+                transition={{delay:1, stiffness:120, type:"spring"}}/>
                 {/* <img src='/globe.svg' alt='globe' className='absolute top-[50px] right-[60px] w-[600px]'/> */}
            </section>
            <div className='line-pattern absolute -bottom-2'>

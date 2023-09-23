@@ -28,7 +28,8 @@ const Section = () => {
             opacity:1,
             x:0,
             transition:{
-                duration:1
+                duration:1,
+                delay:5
             }
         }
     }
@@ -156,9 +157,9 @@ const Section = () => {
         </div>
         <div className='relative'>
             <div className='question-icons'>
-                <img src='/question.svg' alt='question-icon'  className='absolute -top-[24px] right-[32%]'/>
-                <img src='/question-mark.svg' alt='question-icon'  className='absolute top-[10px] right-[24%]'/>
-                <img src='/question-mark.svg' alt='question-icon'  className='absolute top-0 right-[43%]'/>
+                <img src='/question.svg' alt='question-icon'  className='absolute -top-[24px] right-[40%] sm:right-[32%]'/>
+                <img src='/question-mark.svg' alt='question-icon'  className='absolute top-[10px] right-[20px] sm:right-[24%]'/>
+                <img src='/question-mark.svg' alt='question-icon'  className='absolute top-0 right-[82%] sm:right-[43%]'/>
             </div>
             <div className='segment4'>
                 <div className='section2 flex flex-col'>

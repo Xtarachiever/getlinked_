@@ -51,8 +51,8 @@ export const useRegisterHook = () =>{
           })
         if(postRequest.ok){
             setSuccess(true)
-        }else if(!postRequest.ok && postRequest?.statusText !== ''){
-            alert(postRequest.statusText)
+        }else if(!postRequest.ok && postRequest?.status === 400){
+            alert('Applicant with this Email already exists')
         }
         else{
             alert("Something went wrong")
@@ -61,7 +61,9 @@ export const useRegisterHook = () =>{
     }
     const onSubmit = async (data) => {
         postApplication(data);
-        reset();
+        if(success){
+            reset();
+        }
     }
 
     return {

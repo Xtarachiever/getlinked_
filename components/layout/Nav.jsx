@@ -10,17 +10,20 @@ const Nav = () => {
   const pathName = usePathname();
   const [open, setOpen] = useState(false);
   return (
-    <div className='nav'>
+    <motion.div className='nav'
+    animate={{y:0}}
+    initial={{y:"-50vh"}}
+    transition={{delay:1}}>
       <div className="nav-wrapper flex items-center text-white py-6 px-[10px] sm:px-[60px]">
         <Link href={'/'}>
           <motion.img src="/getlinked.svg" alt="logo" whileHover={{scale:1.1}}/>
         </Link>
         <div className={`flex nav-content ${open && 'mobile'}`}>
             <div className="flex links">
-                <Link href={'/'}>Timeline</Link>
-                <Link href={'/'}>Overview</Link>
-                <Link href={'/'}>FAQS</Link>
-                <Link href={'/contact'} className={`${pathName === '/contact' ? 'active' : ''}`}>Contact</Link>
+                <Link href={'/'} onClick={()=>setOpen(false)}>Timeline</Link>
+                <Link href={'/'} onClick={()=>setOpen(false)}>Overview</Link>
+                <Link href={'/'} onClick={()=>setOpen(false)}>FAQS</Link>
+                <Link href={'/contact'} className={`${pathName === '/contact' ? 'active' : ''}`} onClick={()=>setOpen(false)}>Contact</Link>
             </div>
             <Link href={'/register'}>
               <motion.button type='button'
@@ -28,22 +31,23 @@ const Nav = () => {
             </Link>
         </div>
         <div className='nav-hamburger' onClick={()=>setOpen(true)}>
-          <span></span>
-          <span></span>
-          <span></span>
+          <motion.span animate={{x:0}} initial={{x:"-100vw"}} transition={{delay:0.5,stiffness:200}}></motion.span>
+          <motion.span animate={{x:0}} initial={{x:"200px"}} transition={{delay:1,stiffness:250,duration:1}}></motion.span>
+          <motion.span animate={{x:0}} initial={{x:"-100vw"}} transition={{delay:1.2,stiffness:200}}></motion.span>
         </div>
       </div>
       {
         open ? 
-        <div className='absolute top-[10px] close' onClick={()=>setOpen(false)}>
+        <motion.div className='absolute top-[10px] close' onClick={()=>setOpen(false)}
+        whileHover={{scale:0.7}}>
           <img src='/close.svg' alt='close' />
-        </div>
+        </motion.div>
         : <></>
       }
         <div className='w-full'>
           <img src='Line.svg' alt='line' />
         </div>
-    </div>
+    </motion.div>
   )
 }
 

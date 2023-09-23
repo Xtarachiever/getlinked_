@@ -4,9 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body:has(.hidden){
-    overflow: hidden !important;
-} */
+body:has(.hide){
+    overflow: hidden;
+    height: 100vh;
+}
 .check-div label{
     cursor: pointer;
 }

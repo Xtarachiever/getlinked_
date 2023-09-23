@@ -48,7 +48,6 @@ export const useContactHook = () =>{
         else{
             alert("Something went wrong")
         }
-        console.log(sendMessage.status)
     }
 
     const isSubmitting = useMemo(() => {

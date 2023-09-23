@@ -19,9 +19,9 @@ const PrizesAward = () => {
       <div className="prizes-wrapper clear-both">
         <motion.div
           className="awards"
-          initial={{y:100}}
-          animate={{ y: 0 }}
-          transition={{ duration: 2, yoyo: Infinity }}
+          animate={{y:0,x:0}}
+          initial={{y:-60,x:20}}
+          transition={{ duration: 3, repeat:Infinity, ease:"easeOut" }}
         >
           <img src="/Award.svg" alt="awards" />
         </motion.div>

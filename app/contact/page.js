@@ -49,7 +49,13 @@ const texts = {
 }
 
   return (
-    <div className="contact-wrapper relative h-[100vh]">
+    <div className={`contact-wrapper h-[100vh] ${success && 'hide'}`}>
+      <Link href="/">
+        <motion.img src="/leftArrow.svg" alt="back" className="absolute left-[10%] top-[120px]"
+        animate={{x:0}}
+        initial={{x:"-100vw"}}
+        transition={{delay:1}}/>
+      </Link>
       <div className="contact-card-div text-white">
         <motion.div className="contact-info"
         variants={variants}
