@@ -155,11 +155,15 @@ const Section = () => {
         <div className='line-pattern pb-10 pt-10'>
           <img src='Line.svg' alt='line' />
         </div>
-        <FAQS />
+        <div id='faqs'>
+            <FAQS />
+        </div>
         <div className='line-pattern pb-10 pt-10'>
           <img src='Line.svg' alt='line' />
         </div>
-        <Timeline />
+        <div id="timeline">
+            <Timeline />
+        </div>
         <div className='line-pattern pb-10 pt-10'>
           <img src='Line.svg' alt='line' />
         </div>
