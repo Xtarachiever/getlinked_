@@ -2,16 +2,17 @@
     text-align: center;
     width: 100%;
     position: absolute;
-    top: 20%;
-    /* background-color: rgba(20, 13, 39, 0.4); */
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 45%;
     max-width: none;
-    height: 100vh;
 }
 .alert-wrapper .alert-content{
     margin: auto;
     padding: 60px;
     border: 2px solid #D434FE;
     border-radius: 5px;
+    max-width: 600px;
 }
 img{
     display: inline;
@@ -33,7 +34,16 @@ img{
 }
 .cover{
     width: 100vw;
-    height: 100vh;
+    /* overflow-x: hidden; */
+    z-index: 10;
+    min-height: 100vh;
     background-color: rgba(20, 13, 39, 0.9);
     position: absolute;
+    overflow: hidden;
+}
+@media screen and (max-width:500px){
+    .alert-wrapper .alert-content{
+        width: 90%;
+        max-width: none;
+    }
 }

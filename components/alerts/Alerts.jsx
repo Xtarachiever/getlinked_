@@ -7,7 +7,7 @@ const Alerts = ({setPopUp}) => {
     // popUp and change location pathname
   return (
     <div className='alert-wrapper'>
-        <div className="max-w-[600px] alert-content">
+        <div className=" alert-content">
             <div>
                 <Image src="/congratulation.svg" alt="Congrats" width={250} height={250}/>
                 <p className="text-md md:text-xl">Congratulations you have successfully <br />Registered!</p>

@@ -10,6 +10,7 @@ export const useContactHook = () =>{
     const [success, setSuccess] = useState(false);
     const {
         handleSubmit,
+        reset,
         formState,
         setValue,
         watch,
@@ -41,11 +42,13 @@ export const useContactHook = () =>{
         })
         if(sendMessage.ok){
             setSuccess(true);
-        }else if(!sendMessage.ok && sendMessage.status!== ''){
-            throw new Error(`Error! status: ${response.status}`)
-        }else{
-            throw new Error(`Network Error`)
+        }else if(!sendMessage.ok && sendMessage?.statusText !== ''){
+            alert(sendMessage.statusText)
         }
+        else{
+            alert("Something went wrong")
+        }
+        console.log(sendMessage.status)
     }
 
     const isSubmitting = useMemo(() => {
@@ -55,8 +58,8 @@ export const useContactHook = () =>{
     const { email, first_name, phone_number,message } = watch();
 
     const onSubmit = async (data) => {
-        postMessage(data)
-        console.log(data)
+        postMessage(data);
+        reset();
     }
 
     return {
@@ -69,6 +72,7 @@ export const useContactHook = () =>{
         errors: formState.errors,
         handleSubmit,
         onSubmit,
-        success
+        success,
+        setSuccess
     }
 }

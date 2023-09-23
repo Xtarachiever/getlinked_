@@ -11,6 +11,7 @@ export const useRegisterHook = () =>{
     const {
         handleSubmit,
         formState,
+        reset,
         setValue,
         watch,
     } = useForm({
@@ -50,15 +51,17 @@ export const useRegisterHook = () =>{
           })
         if(postRequest.ok){
             setSuccess(true)
-        }else if(!postRequest.ok && postRequest.status!== ''){
-            throw new Error(`Error! status: ${response.status}`)
-        }else{
-            throw new Error(`Network Error`)
+        }else if(!postRequest.ok && postRequest?.statusText !== ''){
+            alert(postRequest.statusText)
         }
+        else{
+            alert("Something went wrong")
+        }
+        // console.log(postRequest.statusText)
     }
     const onSubmit = async (data) => {
-        postApplication(data)
-        console.log("formik-data",data)
+        postApplication(data);
+        reset();
     }
 
     return {
@@ -74,6 +77,7 @@ export const useRegisterHook = () =>{
         errors: formState.errors,
         handleSubmit,
         onSubmit,
-        success
+        success,
+        setSuccess
     }
 }

@@ -4,7 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+/* body:has(.hidden){
+    overflow: hidden !important;
+} */
 .register-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -121,6 +123,10 @@
     100%{
         transform: translateX(-10%);
     }
+}
+button:hover{
+    background: inherit !important;
+    border: 1px solid #FE34B9 !important;
 }
 .input-fields div p{
     padding-bottom: 10px;

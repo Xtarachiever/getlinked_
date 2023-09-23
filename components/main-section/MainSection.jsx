@@ -2,6 +2,7 @@
 import './styles.css';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const MainSection = () => {
   return (
@@ -44,7 +45,7 @@ const MainSection = () => {
                             transition={{repeat:Infinity,duration:2}}/>
                       </div>
                       <p className='text-2xl lg:max-w-[550px] py-6'>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</p>
-                      <button type='button'>Register</button>
+                      <Link href="/"><button type='button'>Register</button></Link>
                       <div className='py-14'>
                         <p className='text-4xl sm:text-6xl'>00<sub className='subscript'>H</sub>00<sub className='subscript'>M</sub>00<sub className='subscript'>s</sub></p>
                       </div>

@@ -1,15 +1,20 @@
 "use client";
 import Alerts from "./Alerts";
-import { useState } from "react";
+import './styles.css';
 
 
-const Overlay = ({setPopUp, popUp,success}) => {
+const Overlay = ({popUp, setPopUp}) => {
 
   return (
-    <div className="absolute left-0 top-0">
-        <div className='cover'>
-         <Alerts setPopUp={setPopUp} popUp={popUp}/>
-        </div>
+    <div>
+      {
+        popUp ?
+        <div className="absolute left-0 top-0">
+            <div className='cover'>
+            <Alerts setPopUp={setPopUp} popUp={popUp}/>
+            </div>
+        </div> : <></>
+      }
     </div>
   )
 }

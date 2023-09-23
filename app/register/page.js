@@ -18,10 +18,10 @@ const Register = () => {
     category,
     team_name,
     handleValueChange,
+    setSuccess
   } = useRegisterHook();
-
   return (
-    <div className="text-white register-wrapper">
+    <div className={`text-white register-wrapper ${success && 'hidden'}`}>
       <p className="text-purpish-pink font-bold text-2xl pb-6 mobile-text">
         Register
       </p>
@@ -123,10 +123,9 @@ const Register = () => {
           </button>
         </form>
         {
-            success ?
-            <Overlay setPopUp={()=>true}/>
-            :
-            <></>
+          success ? 
+          <Overlay popUp={success} setPopUp={setSuccess}/>
+          : <></>
         }
       </div>
     </div>
